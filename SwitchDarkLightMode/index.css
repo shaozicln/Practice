@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: rgb(255, 255, 255);
+  --button: rgb(187, 241, 169);
+  --button-hover: rgb(145, 234, 115);
+  --p: rgb(51, 51, 51);
+  --header: rgb(139, 189, 234);
+  --shade: rgba(0, 0, 0, 0.3);
+  --svg-color:rgba(0, 0, 0, 0.8)
+}
+
+.darkmode {
+  --background: rgb(51, 51, 51);
+  --button: rgba(145, 234, 115, 0.5);
+  --button-hover: rgba(187, 241, 169, 0.5);
+  --p: rgb(255, 255, 255);
+  --header: rgba(139, 190, 234, 0.442);
+  --shade: rgba(255, 255, 255, 0.3);
+  --svg-color:rgba(255, 255, 255, 0.8)
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--background);
+  color: var(--p);
+  line-height: 1.6;
+}
+
+/* 头部样式 */
+header {
+  background-color: var(--header);
+  color: var(--background);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* 按钮样式 */
+.switch {
+ height:50px;
+ width:50px;
+ padding: 8px;
+ border-radius: 50%;
+ transition: all 0.3s ease-in-out;
+ background-color: var(--background);
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ position:fixed;
+ top:20px;
+ right:20px;
+}
+
+.switch:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px #00000033;
+}
+
+.switch path{
+    fill: var(--svg-color) ;
+}
+
+.iconlight{
+    display:none;
+}
+
+.darkmode .icondark{
+    display:none;
+}
+.darkmode .iconlight{
+    display:block;
+}
+
+/* 主要内容区域样式 */
+.text {
+  padding: 20px;
+  background-color: var(--background);
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px var(--shade);
+}
+
+.text p {
+  margin-bottom: 1rem;
+}
+
+.text .start {
+  padding: 10px 20px;
+  background-color: var(--button);
+  color: var(--background);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.text .start:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px var(--shade);
+}

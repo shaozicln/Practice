@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScanGetCard</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  </head>
+  <body>
+    <h2>扫码查看-长柄木勺</h2>
+    <div id="qrcode"></div>
+
+    <script>
+      var fixedText = "Hello, I am changbingmushao~"; 
+
+      function generateQRCode(text) {
+        var qr = qrcode(0, "H"); //创建二维码对象，级别高容错
+        qr.addData(text);//添加要编码的数据
+        qr.make();//生成二维码
+        document.getElementById("qrcode").innerHTML = qr.createImgTag();//将二维码插入页面
+      }
+
+      generateQRCode(fixedText);//调用函数
+    </script>
+  </body>
+</html>
