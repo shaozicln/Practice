@@ -129,6 +129,8 @@
         history.forEach((item) => {
           historyDiv.innerHTML += `<p>${item}</p>`;
         });
+        //滚动到底部
+        historyDiv.scrollTop = historyDiv.scrollHeight;
       }
     </script>
   </body>
